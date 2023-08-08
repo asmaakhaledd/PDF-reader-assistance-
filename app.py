@@ -16,6 +16,7 @@ from langchain.callbacks import get_openai_callback
 
 file_uploaded = False
 
+
 redis_url = os.environ.get("REDIS_URL", "redis://localhost:6379")
 redis_client = redis.StrictRedis.from_url(redis_url)
 PDF_KEY = "uploaded_pdf_content"
@@ -67,6 +68,14 @@ def process_pdf_content(pdf):
 
 def main():
     load_dotenv()
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
+    # if openai_api_key is None or openai_api_key == "":
+    #     st.write("OPENAI_API_KEY is not set")
+    #     exit(1)
+    # else:
+    #     st.write("OPENAI_API_KEY is set")
+        
+        
     st.set_page_config(page_title="Ask your PDF")
     st.header("Ask your PDF 💬")
     
