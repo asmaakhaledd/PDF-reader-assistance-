@@ -5,6 +5,8 @@ from PyPDF2 import PdfReader
 import sqlite3
 import pickle
 import redis
+
+#djncnjkfnjkvdf
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
